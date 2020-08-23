@@ -89,7 +89,7 @@ export default {
 
 		openComic(comic) {
 			this.$http
-				.get(comic.resourceURI)
+				.get(`comics/${comic.id}`)
 				.then((response) => {
 					this.$refs.dialogComic.show(response.body.data.results[0]);
 				});
